@@ -14,7 +14,6 @@ const VALUES = [
 
 export default async function Home() {
   const products = await getProducts();
-  const hero = products.find((p) => p.slug === 'ranger-tracker') || products[0];
   const bySector = (slug: string) => products.filter((p) => slugify(p.category) === slug);
   const cover: Record<string, string> = { taticas: 'ronin-tanto', edc: 'recon-od', sobrevivencia: 'warlord' };
   const arsenal = [...products].sort((a, b) => Number(b.featured) - Number(a.featured)).slice(0, 8);
@@ -26,7 +25,7 @@ export default async function Home() {
       <div className="wrap hero">
         <div className="hero-copy">
           <div className="hud-line mono in1">
-            <span>S 21°47′ · W 48°10′</span><span>GRID C-14</span><span className="accent">SCAN 88%</span>
+            <span>S 21°47′ · W 48°10′</span><span>GRID C-14</span><span className="accent">SCAN 88%</span><span>IVM-01 · SPECTRE</span>
           </div>
           <h1 className="display hero-title in2">Feitas<br />para a <em>missão.</em></h1>
           <p className="lead in3">Facas táticas, EDC e de sobrevivência feitas à mão, uma a uma. Aço de verdade para quem não pode falhar.</p>
@@ -34,10 +33,6 @@ export default async function Home() {
             <Link href="/arsenal" className="btn btn-accent">Ver arsenal</Link>
             <a href="#setores" className="btn btn-ghost">Conhecer setores</a>
           </div>
-        </div>
-        <div className="hero-feature in3">
-          <div className="feature-label mono"><span>DESTAQUE · {hero.code}</span><span className="m-rule" /><span className="gdot" /></div>
-          <ProductCard product={hero} priority big />
         </div>
       </div>
       </section>

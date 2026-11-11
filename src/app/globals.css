@@ -100,13 +100,19 @@ main { position: relative; z-index: 2; }
 .more { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--fg); }
 
 /* ---------- hero ---------- */
-/* Opacidade do vídeo de fundo: ajuste aqui (0 a 1). */
-.hero-shell { position: relative; --video-opacity: 0.5; }
-.hero-video { position: absolute; inset: -76px 0 0 0; z-index: 0; overflow: hidden; pointer-events: none;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 78%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 78%, transparent 100%); }
-.hero-video video { width: 100%; height: 100%; object-fit: cover; opacity: var(--video-opacity); mix-blend-mode: screen; }
-.hero-video::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,6,7,.72) 0%, rgba(5,6,7,.25) 55%, rgba(5,6,7,.1) 100%); }
-.hero-shell .hero { position: relative; z-index: 1; }
+/* Vídeo de fundo do hero. Ajuste a opacidade aqui (0 a 1). */
+.hero-shell { position: relative; --video-opacity: 0.62; }
+.hero-video { position: absolute; top: 50%; right: -4vw; width: min(72vw, 1400px); aspect-ratio: 16 / 9; transform: translateY(-54%); z-index: 0; overflow: hidden; pointer-events: none;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 22%, #000 70%, transparent 100%), linear-gradient(90deg, transparent 0, #000 26%, #000 88%, transparent 100%);
+  -webkit-mask-composite: source-in; mask-image: linear-gradient(180deg, transparent 0, #000 22%, #000 70%, transparent 100%), linear-gradient(90deg, transparent 0, #000 26%, #000 88%, transparent 100%); mask-composite: intersect; }
+.hero-video video { width: 100%; height: 100%; object-fit: cover; opacity: var(--video-opacity); mix-blend-mode: screen; filter: contrast(1.05) brightness(1.05); }
+/* textura: grão fino + linhas de varredura por cima do vídeo */
+.hero-video::before { content: ""; position: absolute; inset: 0; z-index: 1; opacity: .45;
+  background-image: repeating-linear-gradient(0deg, rgba(5,6,7,.28) 0 1px, transparent 1px 4px), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  mix-blend-mode: multiply; }
+.hero-video::after { content: ""; position: absolute; inset: 0; z-index: 2; background: radial-gradient(ellipse 60% 55% at 55% 50%, rgba(5,6,7,0) 0%, rgba(5,6,7,.25) 70%, rgba(5,6,7,.55) 100%); }
+.hero-shell .hero { position: relative; z-index: 1; grid-template-columns: minmax(0, 640px); min-height: calc(100svh - 76px); align-content: center; padding-top: 40px; padding-bottom: 120px; }
+.hero-shell + .block { padding-top: 10px; }
 .hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 6vw, 80px); align-items: center; padding-top: clamp(40px, 8vh, 96px); padding-bottom: clamp(80px, 12vh, 140px); }
 .hero-copy { display: flex; flex-direction: column; gap: 26px; }
 .hud-line { display: flex; gap: 22px; flex-wrap: wrap; font-size: 11px; letter-spacing: 2px; color: var(--mute); }
@@ -249,8 +255,9 @@ main { position: relative; z-index: 2; }
 }
 @media (max-width: 560px) {
   :root { --cut: 14px; }
-  .hero-shell { --video-opacity: 0.42; }
-  .hero-video::after { background: linear-gradient(180deg, rgba(5,6,7,.7) 0%, rgba(5,6,7,.35) 45%, rgba(5,6,7,.2) 100%); }
+  .hero-shell { --video-opacity: 0.5; }
+  .hero-video::after { background: linear-gradient(180deg, rgba(5,6,7,.78) 0%, rgba(5,6,7,.55) 30%, rgba(5,6,7,.1) 60%, rgba(5,6,7,.3) 100%); }
+  .hero-shell .hero { min-height: calc(100svh - 66px); align-content: start; padding-top: 28px; }
   body { font-size: 15px; }
   .top-row { min-height: 66px; }
   .brand img { width: 44px; }
@@ -279,6 +286,11 @@ main { position: relative; z-index: 2; }
   .strip { justify-content: flex-start; }
   .readout { display: none; }
   .foot-grid { grid-template-columns: 1fr; }
+}
+/* telas em pé (celular e tablet): versão vertical do vídeo ocupando a seção */
+@media (max-aspect-ratio: 1/1) {
+  .hero-video { left: -6%; right: -6%; width: auto; aspect-ratio: auto; transform: none; top: 140px; bottom: -120px;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 10%, #000 58%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, #000 10%, #000 58%, transparent 100%); }
 }
 @media (prefers-reduced-motion: reduce) {
   .terrain, .scanline, .gdot { animation: none; }
