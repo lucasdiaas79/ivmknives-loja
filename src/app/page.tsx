@@ -4,6 +4,7 @@ import { CATEGORIES, slugify } from '@/lib/types';
 import { ProductCard } from '@/components/ProductCard';
 import { Marker } from '@/components/Marker';
 import { Diamond, IconArrow } from '@/components/Icons';
+import { HeroVideo } from '@/components/HeroVideo';
 
 const VALUES = [
   { n: '01', t: 'Feita à mão', d: 'Cada faca é desenhada, cortada, temperada e afiada uma a uma na oficina da IVM.' },
@@ -20,7 +21,9 @@ export default async function Home() {
 
   return (
     <>
-      <section className="wrap hero">
+      <section className="hero-shell">
+      <HeroVideo />
+      <div className="wrap hero">
         <div className="hero-copy">
           <div className="hud-line mono in1">
             <span>S 21°47′ · W 48°10′</span><span>GRID C-14</span><span className="accent">SCAN 88%</span>
@@ -36,6 +39,7 @@ export default async function Home() {
           <div className="feature-label mono"><span>DESTAQUE · {hero.code}</span><span className="m-rule" /><span className="gdot" /></div>
           <ProductCard product={hero} priority big />
         </div>
+      </div>
       </section>
 
       <section className="wrap block" id="setores">
