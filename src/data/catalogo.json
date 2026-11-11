@@ -1,0 +1,182 @@
+[
+ {
+  "codigo": "IVM-01",
+  "slug": "spectre",
+  "nome": "Spectre",
+  "categoria": "Táticas",
+  "preco": 890,
+  "foto": "fotos/spectre.webp",
+  "descricao": "Dagger de fio duplo para uso tático. Cabo facetado que garante pegada firme, com ou sem luva.",
+  "destaque": true,
+  "ficha": {
+   "total": "26 cm",
+   "lamina": "14 cm",
+   "espessura": "5 mm",
+   "aco": "D2 · 60 HRC",
+   "cabo": "G10 facetado",
+   "bainha": "Kydex + Ulticlip"
+  }
+ },
+ {
+  "codigo": "IVM-02",
+  "slug": "ranger-tracker",
+  "nome": "Ranger Tracker",
+  "categoria": "Sobrevivência",
+  "preco": 1190,
+  "foto": "fotos/ranger-tracker.webp",
+  "descricao": "Tracker robusta com serrilha no dorso e lâmina larga para trabalho pesado no mato.",
+  "destaque": true,
+  "ficha": {
+   "total": "31 cm",
+   "lamina": "18 cm",
+   "espessura": "6 mm",
+   "aco": "1095 · 58 HRC",
+   "cabo": "G10 facetado",
+   "bainha": "Kydex carbono"
+  }
+ },
+ {
+  "codigo": "IVM-03",
+  "slug": "recon-od",
+  "nome": "Recon OD",
+  "categoria": "EDC",
+  "preco": 640,
+  "foto": "fotos/recon-od.webp",
+  "descricao": "Faca compacta de uso diário, ponta reforçada e cabo verde oliva texturizado.",
+  "destaque": false,
+  "ficha": {
+   "total": "21 cm",
+   "lamina": "10 cm",
+   "espessura": "4 mm",
+   "aco": "D2 · 60 HRC",
+   "cabo": "G10 verde OD",
+   "bainha": "Kydex carbono"
+  }
+ },
+ {
+  "codigo": "IVM-04",
+  "slug": "warlord",
+  "nome": "Warlord",
+  "categoria": "Sobrevivência",
+  "preco": 1080,
+  "foto": "fotos/warlord.webp",
+  "descricao": "Lâmina longa e pesada para cortar, rachar e abrir caminho. Feita para acampamento e mata.",
+  "destaque": true,
+  "ficha": {
+   "total": "35 cm",
+   "lamina": "22 cm",
+   "espessura": "6 mm",
+   "aco": "5160 · 57 HRC",
+   "cabo": "G10 verde OD",
+   "bainha": "Kydex"
+  }
+ },
+ {
+  "codigo": "IVM-05",
+  "slug": "ghost-push",
+  "nome": "Ghost Push",
+  "categoria": "Táticas",
+  "preco": 520,
+  "foto": "fotos/ghost-push.webp",
+  "descricao": "Push dagger de porte discreto, pegada em T e lâmina de fio duplo.",
+  "destaque": false,
+  "ficha": {
+   "total": "13 cm",
+   "lamina": "7 cm",
+   "espessura": "5 mm",
+   "aco": "D2 · 60 HRC",
+   "cabo": "G10 facetado",
+   "bainha": "Kydex + Ulticlip"
+  }
+ },
+ {
+  "codigo": "IVM-06",
+  "slug": "ronin-tanto",
+  "nome": "Ronin Tanto",
+  "categoria": "Táticas",
+  "preco": 760,
+  "foto": "fotos/ronin-tanto.webp",
+  "descricao": "Ponta tanto reforçada para perfuração e cabo facetado preto. Leve e muito resistente.",
+  "destaque": true,
+  "ficha": {
+   "total": "24 cm",
+   "lamina": "11 cm",
+   "espessura": "5 mm",
+   "aco": "D2 · 60 HRC",
+   "cabo": "G10 facetado",
+   "bainha": "Kydex carbono + Ulticlip"
+  }
+ },
+ {
+  "codigo": "IVM-07",
+  "slug": "breacher",
+  "nome": "Breacher",
+  "categoria": "Sobrevivência",
+  "preco": 1150,
+  "foto": "fotos/breacher.webp",
+  "descricao": "Machadinha tática com olhal de empunhadura e cabeça forjada. Para rachar lenha e trabalho bruto.",
+  "destaque": false,
+  "ficha": {
+   "total": "33 cm",
+   "lamina": "Cabeça 11 cm",
+   "espessura": "7 mm",
+   "aco": "1070 · 55 HRC",
+   "cabo": "G10",
+   "bainha": "Kydex com trava"
+  }
+ },
+ {
+  "codigo": "IVM-08",
+  "slug": "blaze-ring",
+  "nome": "Blaze Ring",
+  "categoria": "EDC",
+  "preco": 580,
+  "foto": "fotos/blaze-ring.webp",
+  "descricao": "Faca de pescoço ou cinto com anel de retenção e cabo laranja de alta visibilidade.",
+  "destaque": false,
+  "ficha": {
+   "total": "17 cm",
+   "lamina": "6,5 cm",
+   "espessura": "4 mm",
+   "aco": "D2 · 60 HRC",
+   "cabo": "G10 laranja",
+   "bainha": "Kydex + Ulticlip"
+  }
+ },
+ {
+  "codigo": "IVM-09",
+  "slug": "elk-dagger",
+  "nome": "Elk Dagger",
+  "categoria": "EDC",
+  "preco": 960,
+  "foto": "fotos/elk-dagger.webp",
+  "descricao": "Dagger clássica com cabo em chifre natural e pinos de latão. Peça única.",
+  "destaque": false,
+  "ficha": {
+   "total": "23 cm",
+   "lamina": "11 cm",
+   "espessura": "5 mm",
+   "aco": "1095 · 58 HRC",
+   "cabo": "Chifre natural",
+   "bainha": "Kydex couro"
+  }
+ },
+ {
+  "codigo": "IVM-10",
+  "slug": "frontier-bowie",
+  "nome": "Frontier Bowie",
+  "categoria": "Sobrevivência",
+  "preco": 1140,
+  "foto": "fotos/frontier-bowie.webp",
+  "descricao": "Bowie de lâmina espelhada, guarda em latão e cabo em madeira com pinos. Acompanha bainha de couro.",
+  "destaque": false,
+  "ficha": {
+   "total": "30 cm",
+   "lamina": "17 cm",
+   "espessura": "5 mm",
+   "aco": "Inox 420 · 56 HRC",
+   "cabo": "Madeira nobre",
+   "bainha": "Couro trabalhado"
+  }
+ }
+]
