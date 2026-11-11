@@ -21,7 +21,7 @@ export function Terrain() {
       raf = 0;
       const y = window.scrollY;
       const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-      if (bg.current && !reduce) bg.current.style.backgroundPosition = `center ${-y * 0.22}px`;
+      if (bg.current && !reduce) bg.current.style.transform = `translate3d(0, ${-((y * 0.22) % 3200)}px, 0)`;
       if (lat.current) lat.current.textContent = 'S ' + dms(21.787 + y * 0.000021);
       if (lon.current) lon.current.textContent = 'W ' + dms(48.176 + y * 0.000013);
       if (scan.current) scan.current.textContent = String(Math.round((y / max) * 100)).padStart(2, '0');

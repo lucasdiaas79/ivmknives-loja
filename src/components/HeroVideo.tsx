@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 // Vídeo de fundo do hero: desenho técnico que vira faca, em loop.
-// Escolhe a versão horizontal (desktop) ou vertical (celular) pela proporção da tela.
+// Versão horizontal para telas deitadas e vertical para telas em pé.
+// iOS só faz autoplay se o vídeo estiver com os atributos muted + playsinline no elemento,
+// então eles são aplicados direto no DOM antes de definir a fonte.
 export function HeroVideo() {
   const ref = useRef<HTMLVideoElement>(null);
   const [kind, setKind] = useState<'desk' | 'mob' | null>(null);
@@ -19,19 +21,42 @@ export function HeroVideo() {
   useEffect(() => {
     const v = ref.current;
     if (!v || !kind) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; // fica só o pôster
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    v.muted = true;
+    v.defaultMuted = true;
+    v.setAttribute('muted', '');
+    v.setAttribute('playsinline', '');
+    v.setAttribute('webkit-playsinline', '');
+    v.poster = `/video/hero-${kind}.jpg`;
+    if (reduce) return; // fica só o pôster
+    v.src = `/video/hero-${kind}.mp4`;
     v.load();
-    v.play().catch(() => {});
+
+    const tryPlay = () => v.play().catch(() => {});
+    tryPlay();
+    // Se o navegador bloquear (ex.: modo de economia de bateria), tenta de novo no primeiro toque/rolagem.
+    const retry = () => { tryPlay(); };
+    window.addEventListener('touchstart', retry, { once: true, passive: true });
+    window.addEventListener('scroll', retry, { once: true, passive: true });
+    window.addEventListener('click', retry, { once: true });
+
+    // Pausa quando sai da tela (economiza bateria) e volta quando reaparece.
+    const io = new IntersectionObserver(([e]) => (e.isIntersecting ? tryPlay() : v.pause()), { threshold: 0.05 });
+    io.observe(v);
+    const onVis = () => (document.hidden ? v.pause() : tryPlay());
+    document.addEventListener('visibilitychange', onVis);
+    return () => {
+      io.disconnect();
+      document.removeEventListener('visibilitychange', onVis);
+      window.removeEventListener('touchstart', retry);
+      window.removeEventListener('scroll', retry);
+      window.removeEventListener('click', retry);
+    };
   }, [kind]);
 
   return (
     <div className="hero-video" aria-hidden="true">
-      {kind && (
-        <video ref={ref} key={kind} muted loop playsInline autoPlay preload="auto" poster={`/video/hero-${kind}.jpg`}>
-          <source src={`/video/hero-${kind}.webm`} type="video/webm" />
-          <source src={`/video/hero-${kind}.mp4`} type="video/mp4" />
-        </video>
-      )}
+      <video ref={ref} loop autoPlay muted playsInline preload="auto" disablePictureInPicture disableRemotePlayback />
     </div>
   );
 }
