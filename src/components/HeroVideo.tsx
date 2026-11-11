@@ -1,62 +1,54 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
-// Vídeo de fundo do hero: desenho técnico que vira faca, em loop.
-// Versão horizontal para telas deitadas e vertical para telas em pé.
-// iOS só faz autoplay se o vídeo estiver com os atributos muted + playsinline no elemento,
-// então eles são aplicados direto no DOM antes de definir a fonte.
+// Vídeo de fundo do hero (desenho técnico que vira faca), em loop.
+// O <video> é escrito como HTML puro para que os atributos autoplay/muted/playsinline
+// já venham no HTML do servidor — é o que o iPhone e o Android exigem para tocar sozinho.
+// Duas versões: horizontal (telas deitadas) e vertical (telas em pé); o CSS mostra uma só.
+const attrs = 'autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="auto"';
+const html =
+  `<video class="hv hv-desk" ${attrs} poster="/video/hero-desk.jpg"><source src="/video/hero-desk.mp4" type="video/mp4"></video>` +
+  `<video class="hv hv-mob" ${attrs} poster="/video/hero-mob.jpg"><source src="/video/hero-mob.mp4" type="video/mp4"></video>`;
+
 export function HeroVideo() {
-  const ref = useRef<HTMLVideoElement>(null);
-  const [kind, setKind] = useState<'desk' | 'mob' | null>(null);
+  const box = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const mq = window.matchMedia('(max-aspect-ratio: 1/1)');
-    const pick = () => setKind(mq.matches ? 'mob' : 'desk');
-    pick();
-    mq.addEventListener('change', pick);
-    return () => mq.removeEventListener('change', pick);
-  }, []);
-
-  useEffect(() => {
-    const v = ref.current;
-    if (!v || !kind) return;
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    v.muted = true;
-    v.defaultMuted = true;
-    v.setAttribute('muted', '');
-    v.setAttribute('playsinline', '');
-    v.setAttribute('webkit-playsinline', '');
-    v.poster = `/video/hero-${kind}.jpg`;
-    if (reduce) return; // fica só o pôster
-    v.src = `/video/hero-${kind}.mp4`;
-    v.load();
-
-    const tryPlay = () => v.play().catch(() => {});
-    tryPlay();
-    // Se o navegador bloquear (ex.: modo de economia de bateria), tenta de novo no primeiro toque/rolagem.
-    const retry = () => { tryPlay(); };
-    window.addEventListener('touchstart', retry, { once: true, passive: true });
-    window.addEventListener('scroll', retry, { once: true, passive: true });
-    window.addEventListener('click', retry, { once: true });
-
-    // Pausa quando sai da tela (economiza bateria) e volta quando reaparece.
-    const io = new IntersectionObserver(([e]) => (e.isIntersecting ? tryPlay() : v.pause()), { threshold: 0.05 });
-    io.observe(v);
-    const onVis = () => (document.hidden ? v.pause() : tryPlay());
+    const root = box.current;
+    if (!root) return;
+    const vids = Array.from(root.querySelectorAll('video'));
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      vids.forEach((v) => v.pause());
+      return;
+    }
+    const visible = () => vids.find((v) => v.offsetParent !== null || getComputedStyle(v).display !== 'none');
+    const play = () => {
+      vids.forEach((v) => { v.muted = true; });
+      const v = visible();
+      vids.forEach((o) => o !== v && o.pause());
+      v?.play().catch(() => {});
+    };
+    play();
+    // Navegador bloqueou (ex.: economia de bateria): tenta de novo no primeiro toque/rolagem.
+    const evs = ['touchend', 'touchstart', 'click', 'scroll', 'keydown'];
+    const kick = () => play();
+    evs.forEach((e) => window.addEventListener(e, kick, { passive: true }));
+    const stopKick = () => evs.forEach((e) => window.removeEventListener(e, kick));
+    vids.forEach((v) => v.addEventListener('playing', stopKick, { once: true }));
+    const io = new IntersectionObserver(([e]) => (e.isIntersecting ? play() : vids.forEach((v) => v.pause())), { threshold: 0.05 });
+    io.observe(root);
+    const onVis = () => (document.hidden ? vids.forEach((v) => v.pause()) : play());
     document.addEventListener('visibilitychange', onVis);
+    const mq = window.matchMedia('(max-aspect-ratio: 1/1)');
+    mq.addEventListener('change', play);
     return () => {
+      stopKick();
       io.disconnect();
       document.removeEventListener('visibilitychange', onVis);
-      window.removeEventListener('touchstart', retry);
-      window.removeEventListener('scroll', retry);
-      window.removeEventListener('click', retry);
+      mq.removeEventListener('change', play);
     };
-  }, [kind]);
+  }, []);
 
-  return (
-    <div className="hero-video" aria-hidden="true">
-      <video ref={ref} loop autoPlay muted playsInline preload="auto" disablePictureInPicture disableRemotePlayback />
-    </div>
-  );
+  return <div className="hero-video" aria-hidden="true" ref={box} dangerouslySetInnerHTML={{ __html: html }} />;
 }
