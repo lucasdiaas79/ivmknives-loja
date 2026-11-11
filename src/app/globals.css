@@ -158,6 +158,16 @@ main { position: relative; z-index: 2; overflow-x: clip; }
 .strip { list-style: none; margin: 0; padding: 18px 0; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: 2.4px; text-transform: uppercase; }
 .strip li { display: inline-flex; align-items: center; gap: 10px; }
 
+/* ---------- manifesto ---------- */
+.manifesto { padding-top: clamp(40px, 8vh, 90px); padding-bottom: clamp(100px, 14vh, 160px); display: flex; flex-direction: column; gap: 26px; }
+.manifesto-lead { margin: 0; max-width: 1100px; font-size: clamp(40px, 6.2vw, 96px); font-weight: 900; line-height: .95; }
+.manifesto-lead em { font-style: normal; color: var(--accent); }
+.manifesto-sub { margin: 0; font-size: clamp(17px, 1.6vw, 21px); color: var(--fg2); max-width: 620px; }
+.audience { display: flex; flex-direction: column; gap: 14px; margin-top: 18px; padding-top: 22px; border-top: 1px solid var(--line); }
+.audience ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: 12px; letter-spacing: 2.2px; text-transform: uppercase; }
+.audience li { display: inline-flex; align-items: center; gap: 9px; }
+.foot-tag { margin: 0; font-size: 30px; color: var(--fg); }
+
 /* ---------- arsenal ---------- */
 .page-head { padding-top: clamp(40px, 8vh, 90px); padding-bottom: 36px; display: flex; flex-direction: column; gap: 18px; }
 .eyebrow { font-size: 11px; letter-spacing: 3px; color: var(--accent); }

@@ -7,10 +7,11 @@ import { Diamond, IconArrow } from '@/components/Icons';
 import { HeroVideo } from '@/components/HeroVideo';
 
 const VALUES = [
-  { n: '01', t: 'Feita à mão', d: 'Cada faca é desenhada, cortada, temperada e afiada uma a uma na oficina da IVM.' },
-  { n: '02', t: 'Aço tratado', d: 'Têmpera e revenimento controlados para o equilíbrio certo entre dureza e resistência.' },
-  { n: '03', t: 'Pronta para o campo', d: 'Cabos em G10 facetado e bainhas em Kydex sob medida para cada modelo.' },
+  { n: '01', t: 'Fabricação artesanal', d: 'Materiais selecionados e cada peça feita à mão, com foco em funcionalidade e durabilidade.' },
+  { n: '02', t: 'Projetos exclusivos', d: 'Personalização sob encomenda e produção limitada. Nenhuma faca sai igual à outra.' },
+  { n: '03', t: 'Acabamento premium', d: 'Bainhas em Kydex, gravação a laser e atendimento direto com o fabricante.' },
 ];
+const AUDIENCE = ['Colecionadores', 'EDC', 'Bushcraft', 'Camping', 'Caça', 'Pesca', 'Segurança pública'];
 
 export default async function Home() {
   const products = await getProducts();
@@ -28,7 +29,7 @@ export default async function Home() {
             <span>S 21°47′ · W 48°10′</span><span>GRID C-14</span><span className="accent">SCAN 88%</span><span>IVM-01 · SPECTRE</span>
           </div>
           <h1 className="display hero-title in2">Feitas<br />para a <em>missão.</em></h1>
-          <p className="lead in3">Facas táticas, EDC e de sobrevivência feitas à mão, uma a uma. Aço de verdade para quem não pode falhar.</p>
+          <p className="lead in3">Facas artesanais de alto desempenho para quem busca qualidade, resistência e confiança. Feitas para acompanhar você por muitos anos, em qualquer desafio.</p>
           <div className="hero-cta in4">
             <Link href="/arsenal" className="btn btn-accent">Ver arsenal</Link>
             <a href="#setores" className="btn btn-ghost">Conhecer setores</a>
@@ -77,8 +78,18 @@ export default async function Home() {
         <div className="center reveal"><Link href="/arsenal" className="btn btn-ghost">Ver todas as {products.length} <IconArrow size={14} /></Link></div>
       </section>
 
+      <section className="wrap manifesto" aria-label="Nossa essência">
+        <span className="mono eyebrow reveal">NOSSA ESSÊNCIA</span>
+        <p className="display manifesto-lead reveal">Não criamos facas apenas para serem admiradas. Criamos ferramentas para serem <em>usadas.</em></p>
+        <p className="manifesto-sub reveal">Cada detalhe possui um propósito. Cada faca carrega uma história.</p>
+        <div className="audience reveal">
+          <span className="mono cap">Para quem fazemos</span>
+          <ul className="mono">{AUDIENCE.map((a) => <li key={a}><Diamond />{a}</li>)}</ul>
+        </div>
+      </section>
+
       <section className="wrap block">
-        <Marker title="Oficina" meta="Do traço ao aço" />
+        <Marker title="Oficina" meta="Facas feitas com propósito" />
         <div className="grid3">
           {VALUES.map((v, i) => (
             <div key={v.n} className="card value reveal" style={{ transitionDelay: `${i * 80}ms` }}>
@@ -89,7 +100,7 @@ export default async function Home() {
           ))}
         </div>
         <ul className="strip mono reveal" aria-label="Diferenciais">
-          <li><Diamond />Feita à mão</li><li><Diamond />Aço tratado</li><li><Diamond />G10 facetado</li><li><Diamond />Bainha Kydex inclusa</li>
+          <li><Diamond />Bainhas em Kydex</li><li><Diamond />Gravação a laser</li><li><Diamond />Produção limitada</li><li><Diamond />Direto com o fabricante</li>
         </ul>
       </section>
     </>

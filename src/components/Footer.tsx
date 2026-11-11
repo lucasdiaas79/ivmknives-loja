@@ -10,7 +10,8 @@ export function Footer() {
         <div className="foot-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/brand/ivm-logo.png" alt="IVM Custom Knives" width={96} height={96} />
-          <p>{SITE.tagline}</p>
+          <p className="display foot-tag">{SITE.tagline}</p>
+          <p>{SITE.about}</p>
         </div>
         <div className="foot-col">
           <span className="mono cap">Setores</span>
