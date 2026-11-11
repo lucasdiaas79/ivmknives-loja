@@ -4,5 +4,5 @@ export const SITE = {
   tagline: 'Facas táticas, EDC e de sobrevivência feitas à mão.',
   instagram: '@ivmfacas',
   instagramUrl: 'https://www.instagram.com/ivmfacas/',
-  url: 'https://ivmknives.vercel.app',
+  url: 'https://ivmknives-loja-alpha.vercel.app',
 };
