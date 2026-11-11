@@ -9,7 +9,7 @@ export function Footer() {
       <div className="wrap foot-grid">
         <div className="foot-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/ivm-logo.png" alt="IVM Custom Knives" width={96} height={88} />
+          <img src="/brand/ivm-logo.png" alt="IVM Custom Knives" width={96} height={96} />
           <p>{SITE.tagline}</p>
         </div>
         <div className="foot-col">

@@ -76,7 +76,7 @@ function Sheet({ product: p, onClose }: { product: Product; onClose: () => void 
           </div>
           <p className="sheet-desc">{p.description}</p>
           <FichaTable p={p} />
-          <Link href={`/faca/${p.slug}`} className="btn btn-gold btn-block" onClick={onClose}>Ver ficha completa</Link>
+          <Link href={`/faca/${p.slug}`} className="btn btn-accent btn-block" onClick={onClose}>Ver ficha completa</Link>
         </div>
       </div>
     </div>

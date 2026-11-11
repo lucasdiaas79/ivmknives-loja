@@ -23,12 +23,12 @@ export default async function Home() {
       <section className="wrap hero">
         <div className="hero-copy">
           <div className="hud-line mono in1">
-            <span>S 21°47′ · W 48°10′</span><span>GRID C-14</span><span className="gold">SCAN 88%</span>
+            <span>S 21°47′ · W 48°10′</span><span>GRID C-14</span><span className="accent">SCAN 88%</span>
           </div>
           <h1 className="display hero-title in2">Feitas<br />para a <em>missão.</em></h1>
           <p className="lead in3">Facas táticas, EDC e de sobrevivência feitas à mão, uma a uma. Aço de verdade para quem não pode falhar.</p>
           <div className="hero-cta in4">
-            <Link href="/arsenal" className="btn btn-gold">Ver arsenal</Link>
+            <Link href="/arsenal" className="btn btn-accent">Ver arsenal</Link>
             <a href="#setores" className="btn btn-ghost">Conhecer setores</a>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default async function Home() {
                   <img src={img} alt="" width={800} height={1000} loading="lazy" />
                 </span>
                 <span className="sector-body">
-                  <span className="sector-top mono"><span>{c.sector}</span><span className="gold">{items.length} {items.length === 1 ? 'modelo' : 'modelos'}</span></span>
+                  <span className="sector-top mono"><span>{c.sector}</span><span className="accent">{items.length} {items.length === 1 ? 'modelo' : 'modelos'}</span></span>
                   <span className="display sector-name">{c.label}</span>
                   <span className="sector-line">{c.line}</span>
                   <span className="more mono">Explorar <IconArrow size={14} /></span>

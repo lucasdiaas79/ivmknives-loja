@@ -6,7 +6,7 @@ export default function NotFound() {
       <span className="mono eyebrow">ERRO 404 · FORA DO MAPA</span>
       <h1 className="display page-title">Rota perdida</h1>
       <p className="lead">Esta página não existe ou saiu do arsenal.</p>
-      <div style={{ marginTop: 28 }}><Link href="/arsenal" className="btn btn-gold">Voltar ao arsenal</Link></div>
+      <div style={{ marginTop: 28 }}><Link href="/arsenal" className="btn btn-accent">Voltar ao arsenal</Link></div>
     </section>
   );
 }

@@ -26,7 +26,7 @@ export function Header() {
       <div className="wrap top-row">
         <Link href="/" className="brand" aria-label="IVM Custom Knives, início">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/ivm-logo.png" alt="" width={52} height={48} />
+          <img src="/brand/ivm-logo.png" alt="" width={52} height={52} />
           <span className="brand-word">
             <b>IVM</b>
             <small className="mono">CUSTOM KNIVES</small>
