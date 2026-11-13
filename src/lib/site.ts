@@ -1,6 +1,6 @@
 // Configurações da loja. Contato e canais de venda entram quando o projeto for aprovado.
 export const SITE = {
-  name: 'IVM Custom Knives',
+  name: 'IVM Facas Custom',
   tagline: 'Facas feitas com propósito.',
   about: 'Facas artesanais de alto desempenho, feitas para durar.',
   instagram: '@ivmfacas',

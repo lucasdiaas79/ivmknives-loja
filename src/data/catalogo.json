@@ -3,180 +3,848 @@
   "codigo": "IVM-01",
   "slug": "spectre",
   "nome": "Spectre",
+  "departamento": "facas",
   "categoria": "Táticas",
   "preco": 890,
   "foto": "fotos/spectre.webp",
   "descricao": "Dagger de fio duplo para uso tático. Cabo facetado que garante pegada firme, com ou sem luva.",
   "destaque": true,
-  "ficha": {
-   "total": "26 cm",
-   "lamina": "14 cm",
-   "espessura": "5 mm",
-   "aco": "D2 · 60 HRC",
-   "cabo": "G10 facetado",
-   "bainha": "Kydex + Ulticlip"
-  }
+  "resumo": [
+   "Lâmina 14 cm",
+   "D2",
+   "G10"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "26 cm"
+   ],
+   [
+    "Lâmina",
+    "14 cm"
+   ],
+   [
+    "Espessura",
+    "5 mm"
+   ],
+   [
+    "Aço",
+    "D2 · 60 HRC"
+   ],
+   [
+    "Cabo",
+    "G10 facetado"
+   ],
+   [
+    "Bainha",
+    "Kydex + Ulticlip"
+   ]
+  ]
  },
  {
   "codigo": "IVM-02",
   "slug": "ranger-tracker",
   "nome": "Ranger Tracker",
-  "categoria": "Sobrevivência",
+  "departamento": "facas",
+  "categoria": "Bushcraft & Outdoor",
   "preco": 1190,
   "foto": "fotos/ranger-tracker.webp",
   "descricao": "Tracker robusta com serrilha no dorso e lâmina larga para trabalho pesado no mato.",
   "destaque": true,
-  "ficha": {
-   "total": "31 cm",
-   "lamina": "18 cm",
-   "espessura": "6 mm",
-   "aco": "1095 · 58 HRC",
-   "cabo": "G10 facetado",
-   "bainha": "Kydex carbono"
-  }
+  "resumo": [
+   "Lâmina 18 cm",
+   "1095",
+   "G10"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "31 cm"
+   ],
+   [
+    "Lâmina",
+    "18 cm"
+   ],
+   [
+    "Espessura",
+    "6 mm"
+   ],
+   [
+    "Aço",
+    "1095 · 58 HRC"
+   ],
+   [
+    "Cabo",
+    "G10 facetado"
+   ],
+   [
+    "Bainha",
+    "Kydex carbono"
+   ]
+  ]
  },
  {
   "codigo": "IVM-03",
   "slug": "recon-od",
   "nome": "Recon OD",
+  "departamento": "facas",
   "categoria": "EDC",
   "preco": 640,
   "foto": "fotos/recon-od.webp",
   "descricao": "Faca compacta de uso diário, ponta reforçada e cabo verde oliva texturizado.",
   "destaque": false,
-  "ficha": {
-   "total": "21 cm",
-   "lamina": "10 cm",
-   "espessura": "4 mm",
-   "aco": "D2 · 60 HRC",
-   "cabo": "G10 verde OD",
-   "bainha": "Kydex carbono"
-  }
+  "resumo": [
+   "Lâmina 10 cm",
+   "D2",
+   "G10"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "21 cm"
+   ],
+   [
+    "Lâmina",
+    "10 cm"
+   ],
+   [
+    "Espessura",
+    "4 mm"
+   ],
+   [
+    "Aço",
+    "D2 · 60 HRC"
+   ],
+   [
+    "Cabo",
+    "G10 verde OD"
+   ],
+   [
+    "Bainha",
+    "Kydex carbono"
+   ]
+  ]
  },
  {
   "codigo": "IVM-04",
   "slug": "warlord",
   "nome": "Warlord",
-  "categoria": "Sobrevivência",
+  "departamento": "facas",
+  "categoria": "Lâminas Longas",
   "preco": 1080,
   "foto": "fotos/warlord.webp",
   "descricao": "Lâmina longa e pesada para cortar, rachar e abrir caminho. Feita para acampamento e mata.",
   "destaque": true,
-  "ficha": {
-   "total": "35 cm",
-   "lamina": "22 cm",
-   "espessura": "6 mm",
-   "aco": "5160 · 57 HRC",
-   "cabo": "G10 verde OD",
-   "bainha": "Kydex"
-  }
+  "resumo": [
+   "Lâmina 22 cm",
+   "5160",
+   "G10"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "35 cm"
+   ],
+   [
+    "Lâmina",
+    "22 cm"
+   ],
+   [
+    "Espessura",
+    "6 mm"
+   ],
+   [
+    "Aço",
+    "5160 · 57 HRC"
+   ],
+   [
+    "Cabo",
+    "G10 verde OD"
+   ],
+   [
+    "Bainha",
+    "Kydex"
+   ]
+  ]
  },
  {
   "codigo": "IVM-05",
   "slug": "ghost-push",
   "nome": "Ghost Push",
+  "departamento": "facas",
   "categoria": "Táticas",
   "preco": 520,
   "foto": "fotos/ghost-push.webp",
   "descricao": "Push dagger de porte discreto, pegada em T e lâmina de fio duplo.",
   "destaque": false,
-  "ficha": {
-   "total": "13 cm",
-   "lamina": "7 cm",
-   "espessura": "5 mm",
-   "aco": "D2 · 60 HRC",
-   "cabo": "G10 facetado",
-   "bainha": "Kydex + Ulticlip"
-  }
+  "resumo": [
+   "Lâmina 7 cm",
+   "D2",
+   "G10"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "13 cm"
+   ],
+   [
+    "Lâmina",
+    "7 cm"
+   ],
+   [
+    "Espessura",
+    "5 mm"
+   ],
+   [
+    "Aço",
+    "D2 · 60 HRC"
+   ],
+   [
+    "Cabo",
+    "G10 facetado"
+   ],
+   [
+    "Bainha",
+    "Kydex + Ulticlip"
+   ]
+  ]
  },
  {
   "codigo": "IVM-06",
   "slug": "ronin-tanto",
   "nome": "Ronin Tanto",
+  "departamento": "facas",
   "categoria": "Táticas",
   "preco": 760,
   "foto": "fotos/ronin-tanto.webp",
   "descricao": "Ponta tanto reforçada para perfuração e cabo facetado preto. Leve e muito resistente.",
   "destaque": true,
-  "ficha": {
-   "total": "24 cm",
-   "lamina": "11 cm",
-   "espessura": "5 mm",
-   "aco": "D2 · 60 HRC",
-   "cabo": "G10 facetado",
-   "bainha": "Kydex carbono + Ulticlip"
-  }
+  "resumo": [
+   "Lâmina 11 cm",
+   "D2",
+   "G10"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "24 cm"
+   ],
+   [
+    "Lâmina",
+    "11 cm"
+   ],
+   [
+    "Espessura",
+    "5 mm"
+   ],
+   [
+    "Aço",
+    "D2 · 60 HRC"
+   ],
+   [
+    "Cabo",
+    "G10 facetado"
+   ],
+   [
+    "Bainha",
+    "Kydex carbono + Ulticlip"
+   ]
+  ]
  },
  {
   "codigo": "IVM-07",
   "slug": "breacher",
   "nome": "Breacher",
-  "categoria": "Sobrevivência",
+  "departamento": "facas",
+  "categoria": "Machados",
   "preco": 1150,
   "foto": "fotos/breacher.webp",
   "descricao": "Machadinha tática com olhal de empunhadura e cabeça forjada. Para rachar lenha e trabalho bruto.",
   "destaque": false,
-  "ficha": {
-   "total": "33 cm",
-   "lamina": "Cabeça 11 cm",
-   "espessura": "7 mm",
-   "aco": "1070 · 55 HRC",
-   "cabo": "G10",
-   "bainha": "Kydex com trava"
-  }
+  "resumo": [
+   "Machadinha",
+   "1070",
+   "G10"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "33 cm"
+   ],
+   [
+    "Lâmina",
+    "Cabeça 11 cm"
+   ],
+   [
+    "Espessura",
+    "7 mm"
+   ],
+   [
+    "Aço",
+    "1070 · 55 HRC"
+   ],
+   [
+    "Cabo",
+    "G10"
+   ],
+   [
+    "Bainha",
+    "Kydex com trava"
+   ]
+  ]
  },
  {
   "codigo": "IVM-08",
   "slug": "blaze-ring",
   "nome": "Blaze Ring",
+  "departamento": "facas",
   "categoria": "EDC",
   "preco": 580,
   "foto": "fotos/blaze-ring.webp",
   "descricao": "Faca de pescoço ou cinto com anel de retenção e cabo laranja de alta visibilidade.",
   "destaque": false,
-  "ficha": {
-   "total": "17 cm",
-   "lamina": "6,5 cm",
-   "espessura": "4 mm",
-   "aco": "D2 · 60 HRC",
-   "cabo": "G10 laranja",
-   "bainha": "Kydex + Ulticlip"
-  }
+  "resumo": [
+   "Lâmina 6,5 cm",
+   "D2",
+   "G10"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "17 cm"
+   ],
+   [
+    "Lâmina",
+    "6,5 cm"
+   ],
+   [
+    "Espessura",
+    "4 mm"
+   ],
+   [
+    "Aço",
+    "D2 · 60 HRC"
+   ],
+   [
+    "Cabo",
+    "G10 laranja"
+   ],
+   [
+    "Bainha",
+    "Kydex + Ulticlip"
+   ]
+  ]
  },
  {
   "codigo": "IVM-09",
   "slug": "elk-dagger",
   "nome": "Elk Dagger",
-  "categoria": "EDC",
+  "departamento": "facas",
+  "categoria": "Clássicas",
   "preco": 960,
   "foto": "fotos/elk-dagger.webp",
   "descricao": "Dagger clássica com cabo em chifre natural e pinos de latão. Peça única.",
   "destaque": false,
-  "ficha": {
-   "total": "23 cm",
-   "lamina": "11 cm",
-   "espessura": "5 mm",
-   "aco": "1095 · 58 HRC",
-   "cabo": "Chifre natural",
-   "bainha": "Kydex couro"
-  }
+  "resumo": [
+   "Lâmina 11 cm",
+   "1095",
+   "Chifre"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "23 cm"
+   ],
+   [
+    "Lâmina",
+    "11 cm"
+   ],
+   [
+    "Espessura",
+    "5 mm"
+   ],
+   [
+    "Aço",
+    "1095 · 58 HRC"
+   ],
+   [
+    "Cabo",
+    "Chifre natural"
+   ],
+   [
+    "Bainha",
+    "Kydex couro"
+   ]
+  ]
  },
  {
   "codigo": "IVM-10",
   "slug": "frontier-bowie",
   "nome": "Frontier Bowie",
-  "categoria": "Sobrevivência",
+  "departamento": "facas",
+  "categoria": "Clássicas",
   "preco": 1140,
   "foto": "fotos/frontier-bowie.webp",
   "descricao": "Bowie de lâmina espelhada, guarda em latão e cabo em madeira com pinos. Acompanha bainha de couro.",
   "destaque": false,
-  "ficha": {
-   "total": "30 cm",
-   "lamina": "17 cm",
-   "espessura": "5 mm",
-   "aco": "Inox 420 · 56 HRC",
-   "cabo": "Madeira nobre",
-   "bainha": "Couro trabalhado"
-  }
+  "resumo": [
+   "Lâmina 17 cm",
+   "Inox 420",
+   "Madeira"
+  ],
+  "ficha": [
+   [
+    "Comprimento",
+    "30 cm"
+   ],
+   [
+    "Lâmina",
+    "17 cm"
+   ],
+   [
+    "Espessura",
+    "5 mm"
+   ],
+   [
+    "Aço",
+    "Inox 420 · 56 HRC"
+   ],
+   [
+    "Cabo",
+    "Madeira nobre"
+   ],
+   [
+    "Bainha",
+    "Couro trabalhado"
+   ]
+  ]
+ },
+ {
+  "codigo": "BK-01",
+  "slug": "bainha-kydex-carbono",
+  "nome": "Kydex Carbono",
+  "departamento": "bainhas",
+  "categoria": "Kydex",
+  "preco": 290,
+  "foto": "fotos/bainha-kydex-carbono.webp",
+  "descricao": "Bainha em Kydex com acabamento fibra de carbono, moldada sob medida para facas de lâmina larga.",
+  "destaque": false,
+  "resumo": [
+   "Kydex 2 mm",
+   "Passador de cinto"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Kydex 2 mm"
+   ],
+   [
+    "Acabamento",
+    "Fibra de carbono"
+   ],
+   [
+    "Fixação",
+    "Passador de cinto"
+   ],
+   [
+    "Retenção",
+    "Ajustável por ilhoses"
+   ],
+   [
+    "Feita para",
+    "Ranger Tracker"
+   ]
+  ]
+ },
+ {
+  "codigo": "BK-02",
+  "slug": "bainha-kydex-ulticlip",
+  "nome": "Kydex Ulticlip Duplo",
+  "departamento": "bainhas",
+  "categoria": "Kydex",
+  "preco": 260,
+  "foto": "fotos/bainha-kydex-ulticlip.webp",
+  "descricao": "Bainha preta com dois Ulticlips para porte velado na cintura (IWB), firme e discreta.",
+  "destaque": false,
+  "resumo": [
+   "Kydex 2 mm",
+   "2× Ulticlip"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Kydex 2 mm"
+   ],
+   [
+    "Acabamento",
+    "Preto fosco"
+   ],
+   [
+    "Fixação",
+    "2× Ulticlip"
+   ],
+   [
+    "Retenção",
+    "Ajustável por ilhoses"
+   ],
+   [
+    "Feita para",
+    "Spectre e daggers"
+   ]
+  ]
+ },
+ {
+  "codigo": "BK-03",
+  "slug": "bainha-kydex-coyote",
+  "nome": "Kydex Coyote",
+  "departamento": "bainhas",
+  "categoria": "Kydex",
+  "preco": 270,
+  "foto": "fotos/bainha-kydex-coyote.webp",
+  "descricao": "Kydex com padrão carbono em tom coyote, leve e resistente à água para o dia a dia.",
+  "destaque": false,
+  "resumo": [
+   "Kydex 2 mm",
+   "Passador de cinto"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Kydex 2 mm"
+   ],
+   [
+    "Acabamento",
+    "Carbono coyote"
+   ],
+   [
+    "Fixação",
+    "Passador de cinto"
+   ],
+   [
+    "Retenção",
+    "Ajustável por ilhoses"
+   ],
+   [
+    "Feita para",
+    "Recon OD"
+   ]
+  ]
+ },
+ {
+  "codigo": "BK-04",
+  "slug": "bainha-kydex-carbono-clip",
+  "nome": "Kydex Carbono Clip",
+  "departamento": "bainhas",
+  "categoria": "Kydex",
+  "preco": 280,
+  "foto": "fotos/bainha-kydex-carbono-clip.webp",
+  "descricao": "Bainha compacta com Ulticlip para porte vertical ou horizontal.",
+  "destaque": false,
+  "resumo": [
+   "Kydex 2 mm",
+   "Ulticlip"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Kydex 2 mm"
+   ],
+   [
+    "Acabamento",
+    "Fibra de carbono"
+   ],
+   [
+    "Fixação",
+    "Ulticlip"
+   ],
+   [
+    "Retenção",
+    "Ajustável por ilhoses"
+   ],
+   [
+    "Feita para",
+    "Ronin Tanto"
+   ]
+  ]
+ },
+ {
+  "codigo": "BK-05",
+  "slug": "bainha-kydex-machado",
+  "nome": "Kydex para Machadinha",
+  "departamento": "bainhas",
+  "categoria": "Kydex",
+  "preco": 320,
+  "foto": "fotos/bainha-kydex-machado.webp",
+  "descricao": "Capa em Kydex para proteger o fio da machadinha, com trava e gravação IVM.",
+  "destaque": false,
+  "resumo": [
+   "Kydex 2,5 mm",
+   "Clipe de cinto"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Kydex 2,5 mm"
+   ],
+   [
+    "Acabamento",
+    "Preto texturizado"
+   ],
+   [
+    "Fixação",
+    "Clipe de cinto"
+   ],
+   [
+    "Retenção",
+    "Trava com tira"
+   ],
+   [
+    "Feita para",
+    "Breacher"
+   ]
+  ]
+ },
+ {
+  "codigo": "BK-06",
+  "slug": "bainha-kydex-neck",
+  "nome": "Kydex Neck & Belt",
+  "departamento": "bainhas",
+  "categoria": "Kydex",
+  "preco": 220,
+  "foto": "fotos/bainha-kydex-neck.webp",
+  "descricao": "Bainha pequena para pescoço ou cinto, ideal para facas de EDC com anel.",
+  "destaque": false,
+  "resumo": [
+   "Kydex 1,5 mm",
+   "Ulticlip ou cordão"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Kydex 1,5 mm"
+   ],
+   [
+    "Acabamento",
+    "Preto fosco"
+   ],
+   [
+    "Fixação",
+    "Ulticlip ou cordão"
+   ],
+   [
+    "Retenção",
+    "Ajustável por ilhoses"
+   ],
+   [
+    "Feita para",
+    "Blaze Ring"
+   ]
+  ]
+ },
+ {
+  "codigo": "BC-01",
+  "slug": "bainha-couro-trabalhada",
+  "nome": "Couro Trabalhado",
+  "departamento": "bainhas",
+  "categoria": "Couro",
+  "preco": 340,
+  "foto": "fotos/bainha-couro-trabalhada.webp",
+  "descricao": "Bainha em couro legítimo com costura à mão e desenhos gravados. Clássica e durável.",
+  "destaque": false,
+  "resumo": [
+   "Couro legítimo 3 mm",
+   "Passador de cinto"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Couro legítimo 3 mm"
+   ],
+   [
+    "Acabamento",
+    "Gravação à mão"
+   ],
+   [
+    "Fixação",
+    "Passador de cinto"
+   ],
+   [
+    "Costura",
+    "Manual, linha encerada"
+   ],
+   [
+    "Feita para",
+    "Frontier Bowie"
+   ]
+  ]
+ },
+ {
+  "codigo": "BC-02",
+  "slug": "bainha-couro-ulticlip",
+  "nome": "Couro Ulticlip",
+  "departamento": "bainhas",
+  "categoria": "Couro",
+  "preco": 310,
+  "foto": "fotos/bainha-couro-ulticlip.webp",
+  "descricao": "Couro café moldado com dois Ulticlips: o visual clássico com a praticidade do porte moderno.",
+  "destaque": false,
+  "resumo": [
+   "Couro legítimo",
+   "2× Ulticlip"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Couro legítimo"
+   ],
+   [
+    "Acabamento",
+    "Tingido café"
+   ],
+   [
+    "Fixação",
+    "2× Ulticlip"
+   ],
+   [
+    "Retenção",
+    "Moldada na faca"
+   ],
+   [
+    "Feita para",
+    "Elk Dagger"
+   ]
+  ]
+ },
+ {
+  "codigo": "AC-01",
+  "slug": "caneta-tatica",
+  "nome": "Caneta Tática",
+  "departamento": "acessorios",
+  "categoria": "Acessórios EDC",
+  "preco": 189,
+  "foto": "fotos/caneta-tatica.webp",
+  "descricao": "Caneta em alumínio aeronáutico com ponta quebra-vidro e clipe reforçado.",
+  "destaque": false,
+  "resumo": [
+   "Alumínio 6061",
+   "15 cm"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Alumínio 6061"
+   ],
+   [
+    "Comprimento",
+    "15 cm"
+   ],
+   [
+    "Ponta",
+    "Quebra-vidro"
+   ],
+   [
+    "Refil",
+    "Tinta preta"
+   ]
+  ]
+ },
+ {
+  "codigo": "AC-02",
+  "slug": "lanterna-tatica",
+  "nome": "Lanterna Tática",
+  "departamento": "acessorios",
+  "categoria": "Acessórios EDC",
+  "preco": 229,
+  "foto": "fotos/lanterna-tatica.webp",
+  "descricao": "Lanterna compacta de LED com clipe, ideal para carregar junto da faca no dia a dia.",
+  "destaque": false,
+  "resumo": [
+   "Alumínio",
+   "11 cm"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Alumínio"
+   ],
+   [
+    "Comprimento",
+    "11 cm"
+   ],
+   [
+    "Luz",
+    "LED de alta potência"
+   ],
+   [
+    "Uso",
+    "EDC e camping"
+   ]
+  ]
+ },
+ {
+  "codigo": "AC-03",
+  "slug": "kit-edc",
+  "nome": "Kit EDC IVM",
+  "departamento": "acessorios",
+  "categoria": "Acessórios EDC",
+  "preco": 490,
+  "foto": "fotos/kit-edc.webp",
+  "descricao": "Kit para o bolso: multiferramenta, caneta tática e lanterna em tom preto.",
+  "destaque": false,
+  "resumo": [
+   "3 peças",
+   "Aço e alumínio"
+  ],
+  "ficha": [
+   [
+    "Itens",
+    "3 peças"
+   ],
+   [
+    "Material",
+    "Aço e alumínio"
+   ],
+   [
+    "Acabamento",
+    "Preto fosco"
+   ],
+   [
+    "Uso",
+    "Dia a dia e campo"
+   ]
+  ]
+ },
+ {
+  "codigo": "AC-04",
+  "slug": "multiferramenta",
+  "nome": "Multiferramenta",
+  "departamento": "acessorios",
+  "categoria": "Acessórios EDC",
+  "preco": 360,
+  "foto": "fotos/multiferramenta.webp",
+  "descricao": "Alicate multifunção com lâmina, chaves e abridor, travas de segurança e acabamento preto.",
+  "destaque": false,
+  "resumo": [
+   "Aço inox",
+   "12"
+  ],
+  "ficha": [
+   [
+    "Material",
+    "Aço inox"
+   ],
+   [
+    "Funções",
+    "12"
+   ],
+   [
+    "Trava",
+    "Liner lock"
+   ],
+   [
+    "Uso",
+    "EDC e oficina"
+   ]
+  ]
  }
 ]

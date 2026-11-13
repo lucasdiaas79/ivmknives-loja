@@ -3,7 +3,7 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import type { Product } from '@/lib/types';
-import { FICHA_LABELS, formatPrice } from '@/lib/types';
+import { formatPrice } from '@/lib/types';
 import { Diamond, IconClose } from './Icons';
 
 type Ctx = { open: (p: Product) => void };
@@ -43,11 +43,11 @@ export function ProductModalProvider({ children }: { children: React.ReactNode }
 export function FichaTable({ p }: { p: Product }) {
   return (
     <dl className="ficha">
-      {FICHA_LABELS.map(({ key, label }) => (
-        <div key={key}>
+      {p.ficha.map(([label, value]) => (
+        <div key={label}>
           <dt className="mono">{label}</dt>
           <span aria-hidden="true" className="dots" />
-          <dd className="mono">{p.ficha[key]}</dd>
+          <dd className="mono">{value}</dd>
         </div>
       ))}
     </dl>
@@ -63,7 +63,7 @@ function Sheet({ product: p, onClose }: { product: Product; onClose: () => void 
         <button ref={closeRef} className="icon-btn sheet-close" onClick={onClose} aria-label="Fechar"><IconClose /></button>
         <div className="sheet-media ph">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={p.image} alt={`Faca ${p.name}, IVM Custom Knives`} width={800} height={1000} />
+          <img src={p.image} alt={`${p.name}, IVM Facas Custom`} width={800} height={1000} />
         </div>
         <div className="sheet-body">
           <div className="sheet-meta">
@@ -76,7 +76,7 @@ function Sheet({ product: p, onClose }: { product: Product; onClose: () => void 
           </div>
           <p className="sheet-desc">{p.description}</p>
           <FichaTable p={p} />
-          <Link href={`/faca/${p.slug}`} className="btn btn-accent btn-block" onClick={onClose}>Ver ficha completa</Link>
+          <Link href={`/produto/${p.slug}`} className="btn btn-accent btn-block" onClick={onClose}>Ver ficha completa</Link>
         </div>
       </div>
     </div>

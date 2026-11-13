@@ -9,10 +9,10 @@ import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: { default: 'IVM Custom Knives — Facas táticas, EDC e de sobrevivência', template: '%s · IVM Custom Knives' },
+  title: { default: 'IVM Facas Custom — Facas feitas com propósito', template: '%s · IVM Facas Custom' },
   description: 'Facas artesanais de alto desempenho: táticas, EDC e de sobrevivência. Facas feitas com propósito.',
   icons: { icon: '/icon.png', apple: '/apple-icon.png' },
-  openGraph: { title: 'IVM Custom Knives', description: SITE.tagline, images: ['/og.jpg'], locale: 'pt_BR', type: 'website' },
+  openGraph: { title: 'IVM Facas Custom — Facas feitas com propósito', description: SITE.tagline, images: ['/og.jpg'], locale: 'pt_BR', type: 'website' },
   robots: { index: false, follow: false }, // versão de apresentação
 };
 
