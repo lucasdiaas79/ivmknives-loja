@@ -45,7 +45,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className={`top${solid ? ' solid' : ''}`}>
+    <header className={`top${solid ? ' solid' : ''}${open ? ' menu-open' : ''}`}>
       <div className="wrap top-row">
         <Brand />
         <nav className="nav mono" aria-label="Principal">
